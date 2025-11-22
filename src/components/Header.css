@@ -98,7 +98,7 @@
     display: none;
   }
 
-  .mobile-menu {
+  /* .mobile-menu {
     display: none;
     background: var(--bg-primary);
     padding: 20px;
@@ -129,5 +129,5 @@
     cursor: pointer;
     font-weight: bold;
     border-radius: 4px;
-  }
-}
+  /* } */
+} 

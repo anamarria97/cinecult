@@ -1,4 +1,4 @@
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -89,4 +89,224 @@ a {
   background: var(--bg-secondary);
   color: #020617;
   margin-left: 12px;
+} */
+
+/* ─────────────────────────── */
+/* RESET & VARIABLES           */
+/* ─────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-primary: #e5e7eb;
+  --text-secondary: #facc15;
+  --text-light: #9ca3af;
+
+  --bg-primary: #020617;
+  --bg-secondary: #facc15;
+}
+
+/* ─────────────────────────── */
+/* GENERAL                     */
+/* ─────────────────────────── */
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #040c31;
+  color: var(--text-primary);
+  overflow-x: hidden; /* previne scroll orizontal */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-root {
+  min-height: 100vh;
+  background-color: #050816;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 40px 60px;
+}
+
+/* ─────────────────────────── */
+/* MOVIES LIST (DESKTOP)       */
+/* ─────────────────────────── */
+
+.movies-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+/* ─────────────────────────── */
+/* DETAILS PAGE                */
+/* ─────────────────────────── */
+
+.details-title {
+  font-size: 32px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.details-poster {
+  width: 280px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.details-description {
+  color: var(--text-primary);
+  max-width: 600px;
+}
+
+.details-rating,
+.details-genres {
+  color: var(--text-light);
+}
+
+.details-fav-btn,
+.details-play-btn {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.details-fav-btn {
+  background: #1f2937;
+  color: var(--text-secondary);
+}
+
+.details-fav-btn.fav-active {
+  background: #dc2626;
+  color: var(--text-primary);
+}
+
+.details-play-btn {
+  background: var(--bg-secondary);
+  color: #020617;
+  margin-left: 12px;
+}
+
+/* ─────────────────────────── */
+/* 📱 MOBILE OPTIMIZATION      */
+/* ─────────────────────────── */
+
+@media (max-width: 768px) {
+  
+  body {
+    background-color: #040c31;
+  }
+
+  /* Page width */
+  .page {
+    padding: 0 16px 40px;
+    margin: 20px auto;
+  }
+
+  /* HERO / LAYOUT FIX */
+  .layout {
+    height: 55vh !important; /* mai scund și adaptat pe mobil */
+  }
+
+  .layout-content {
+    bottom: 20px !important;
+    left: 16px !important;
+    right: 16px;
+  }
+
+  .layout-title {
+    font-size: 22px !important;
+  }
+
+  .layout-desc {
+    font-size: 14px !important;
+  }
+
+  /* Carduri filme (categorii) */
+  .row-scroll img,
+  .row-poster {
+    width: 120px !important;
+    height: 170px !important;
+    border-radius: 8px;
+  }
+
+  /* GRID search + year search */
+  .movies-list,
+  .search-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    padding: 0 8px;
+  }
+
+  /* Search cards */
+  .search-card {
+    background: var(--bg-primary);
+    border-radius: 10px;
+    padding-bottom: 10px;
+  }
+
+  .search-title {
+    font-size: 14px;
+  }
+
+  .search-rating {
+    font-size: 13px;
+  }
+
+  .search-desc {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  /* Header */
+  .header-inner {
+    padding: 10px 12px;
+  }
+
+  .menu-icon {
+    font-size: 26px;
+  }
+
+  .mobile-menu {
+    padding: 20px 16px;
+  }
+
+  .mobile-nav a {
+    font-size: 18px;
+    padding: 8px 0;
+  }
+
+  .cc-search {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+/* ─────────────────────────── */
+/* VERY SMALL PHONES (≤480px) */
+/* ─────────────────────────── */
+
+@media (max-width: 480px) {
+  .movies-list,
+  .search-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .layout {
+    height: 50vh !important;
+  }
 }
