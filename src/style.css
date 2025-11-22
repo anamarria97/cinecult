@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-primary: #e5e7eb;
+  --text-secondary: #facc15;
+  --text-light: #9ca3af;
+
+  --bg-primary: #020617;
+  --bg-secondary: #facc15;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #040c31;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-root {
+  min-height: 100vh;
+  background-color: #050816;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 40px 60px;
+}
+
+.movies-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.details-title {
+  font-size: 32px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.details-poster {
+  width: 280px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.details-description {
+  color: var(--text-primary);
+  max-width: 600px;
+}
+
+.details-rating,
+.details-genres {
+  color: var(--text-light);
+}
+
+.details-fav-btn,
+.details-play-btn {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.details-fav-btn {
+  background: #1f2937;
+  color: var(--text-secondary);
+}
+
+.details-fav-btn.fav-active {
+  background: #dc2626;
+  color: var(--text-primary);
+}
+
+.details-play-btn {
+  background: var(--bg-secondary);
+  color: #020617;
+  margin-left: 12px;
+}

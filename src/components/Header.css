@@ -1,0 +1,133 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg-primary);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: 1000;
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+}
+
+.desktop {
+  display: flex;
+  gap: 16px;
+  margin-left: 24px;
+}
+
+.link {
+  font-size: 20px;
+  color: var(--text-primary);
+  opacity: 0.8;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.link:hover,
+.active-link {
+  opacity: 1;
+  color: var(--text-secondary);
+}
+
+.button {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.search-filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.search,
+.search {
+  background: var(--bg-primary);
+  border: 1px solid #1f2937;
+  padding: 8px 12px;
+  color: var(--text-primary);
+  border-radius: 4px;
+  min-width: 220px;
+}
+
+.select-year {
+  background: var(--bg-primary);
+  border: 1px solid #1f2937;
+  padding: 8px 10px;
+  color: var(--text-primary);
+  border-radius: 4px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.show-menu {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .search-filters {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+    background: var(--bg-primary);
+    padding: 20px;
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  .mobile-menu.show-menu {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 20px;
+  }
+
+  .mobile-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-search-btn {
+    padding: 10px;
+    background: var(--bg-secondary);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+}
