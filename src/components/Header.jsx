@@ -33,7 +33,6 @@ export default function Header() {
         <Link to="/" className={"logo" + isActive("/")}>
           CineCult
         </Link>
-
         <span className="material-icons menu-icon" onClick={toggleMenu}>
           menu
         </span>

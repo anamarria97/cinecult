@@ -5,7 +5,7 @@
 .layout {
   width: 100%;
   max-width: 100%;
-  height: 80vh;     /* perfect pentru desktop */
+  height: 90vh;
   position: relative;
   overflow: hidden;
 }
@@ -94,7 +94,21 @@
 .row-poster:hover {
   transform: scale(1.05);
 }
-/* @media (max-width: 768px) {
+
+@media (max-width: 1024px) {
   .layout {
-    height: 60vh;   /* mai mic pe mobil */
-  
+    height: 40vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    height: 32vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout {
+    height: 28vh;
+  }
+}
