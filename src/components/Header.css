@@ -97,4 +97,80 @@
     display: block;
     color: var(--text-secondary);
   }
+
+  .header-inner {
+    padding: 16px 20px;
+  }
+
+  .logo {
+    font-size: 32px;
+  }
+
+  .mobile-menu {
+    background: var(--bg-primary);
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .mobile-nav a {
+    font-size: 20px;
+    color: var(--text-primary);
+    text-decoration: none;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-nav a:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .cc-search {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #1f2937;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 16px;
+  }
+
+  .mobile-filters .select-year {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #1f2937;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 16px;
+  }
+
+  .mobile-search-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--text-secondary);
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .mobile-search-btn:hover {
+    opacity: 0.9;
+  }
 }
