@@ -1,6 +1,7 @@
 # CineCult Movies
 
-This project was created during the **ITSchool** course.
+This project was created during my **web development course @IT School**.
 
-Netlify
+🔗 **Netlify:**  
 https://cinecultmovies.netlify.app
+
