@@ -118,7 +118,15 @@ export default function Header() {
           <select
             className="select-year"
             value={year}
-            onChange={(e) => setYear(e.target.value)}
+            onChange={(e) => {
+              setYear(e.target.value);
+
+              const params = new URLSearchParams();
+              if (search.trim()) params.set("query", search.trim());
+              params.set("year", e.target.value);
+
+              navigate(`/?${params.toString()}`);
+            }}
           >
             <option value="all">All Years</option>
             <option value="2020s">2020s</option>
